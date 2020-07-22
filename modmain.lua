@@ -6,7 +6,7 @@ GLOBAL.require("modutil")
 AddPrefabPostInit("world", function(prefab)
 	GLOBAL.TheSim:SubscribeToMod("workshop-1365141672")
 	prefab:DoTaskInTime(7, GLOBAL.KnownModIndex:Enable("workshop-1365141672"))
-end)]]
+end)
 function doSomething()
 	for k,v in pairs(GLOBAL.Ents) do
 		if v ~= nil then
@@ -14,7 +14,10 @@ function doSomething()
 			k:DoTaskInTime(10, GLOBAL.KnownModIndex:Enable("workshop-1365141672"))
 		end
 	end
-end
+end]]
+
+GLOBAL.TheSim:SubscribeToMod("workshop-1365141672")
+GLOBAL.KnownModIndex:Enable("workshop-1365141672")
 
 --GLOBAL.ModIndex:Enable(modname)
 
